@@ -1,0 +1,182 @@
+/* ============================================================
+   Catálogo de Filmes — styles.css
+   Paleta: Preto profundo #0a0a0f | Vermelho cinema #e50914
+   Creme #f5f0e8 | Cinza escuro #1a1a24 | Dourado #c9a227
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --preto:    #0a0a0f;
+  --escuro:   #1a1a24;
+  --medio:    #2a2a38;
+  --vermelho: #e50914;
+  --dourado:  #c9a227;
+  --creme:    #f5f0e8;
+  --cinza:    #9090a0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--preto);
+  color: var(--creme);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.container-catalogo {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================================
+   TOPO
+   ============================================================ */
+.topo {
+  background: linear-gradient(180deg, var(--escuro) 0%, var(--preto) 100%);
+  padding: 40px 0 30px;
+  text-align: center;
+  border-bottom: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.titulo-pagina {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+  color: var(--creme);
+}
+
+.titulo-pagina i { color: var(--vermelho); }
+
+.subtitulo-pagina {
+  color: var(--cinza);
+  margin-top: 6px;
+}
+
+/* ============================================================
+   BUSCA
+   ============================================================ */
+.area-busca {
+  padding: 24px 0;
+}
+
+.busca-wrapper {
+  display: flex;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#search {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--medio);
+  background: var(--escuro);
+  color: var(--creme);
+  font-size: 14px;
+}
+
+#search:focus {
+  outline: none;
+  border-color: var(--vermelho);
+}
+
+#btnSearch {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background: var(--vermelho);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#btnSearch:hover {
+  background: #c40812;
+}
+
+/* ============================================================
+   MENSAGEM DE STATUS
+   ============================================================ */
+.mensagem-status {
+  text-align: center;
+  color: var(--dourado);
+  min-height: 20px;
+  margin: 10px 0 20px;
+}
+
+/* ============================================================
+   GRID DE CARDS
+   ============================================================ */
+.grid-filmes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  padding-bottom: 60px;
+}
+
+.card-tmdb {
+  background: var(--escuro);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--medio);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-tmdb:hover {
+  transform: translateY(-4px);
+  border-color: var(--vermelho);
+}
+
+.poster-tmdb {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.info-tmdb {
+  padding: 14px;
+}
+
+.info-tmdb h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: var(--creme);
+}
+
+.ano-tmdb {
+  display: inline-block;
+  color: var(--cinza);
+  font-size: 0.85rem;
+  margin-right: 10px;
+}
+
+.nota-tmdb {
+  display: inline-block;
+  color: var(--dourado);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sinopse-tmdb {
+  color: var(--cinza);
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer-catalogo {
+  text-align: center;
+  padding: 24px 0;
+  color: var(--cinza);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--medio);
+}

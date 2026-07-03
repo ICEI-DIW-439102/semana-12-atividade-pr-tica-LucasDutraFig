@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Filmes — TMDB</title>
+
+  <!-- Bootstrap Icons (só pros ícones, mantendo leve) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Estilos próprios -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========================================================
+       CABEÇALHO
+       ======================================================== -->
+  <header class="topo">
+    <div class="container-catalogo">
+      <h1 class="titulo-pagina"><i class="bi bi-film"></i> Catálogo de Filmes</h1>
+      <p class="subtitulo-pagina">Filmes populares em tempo real, direto da The Movie DB</p>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       BUSCA / FILTRO
+       ======================================================== -->
+  <section class="area-busca">
+    <div class="container-catalogo busca-wrapper">
+      <input type="text" id="search" placeholder="Buscar filme...">
+      <button id="btnSearch"><i class="bi bi-search"></i> Buscar</button>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       MENSAGENS (carregando / erro / vazio)
+       ======================================================== -->
+  <p id="message" class="mensagem-status"></p>
+
+  <!-- ========================================================
+       LISTA DE FILMES (CARDS GERADOS VIA JS)
+       ======================================================== -->
+  <main class="container-catalogo">
+    <div id="movie-list" class="grid-filmes"></div>
+  </main>
+
+  <footer class="footer-catalogo">
+    <p>Dados fornecidos por The Movie DB (TMDB) &middot; Atividade Prática — Fetch API</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
